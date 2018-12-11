@@ -1,53 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-		<title>Presentatin HTML reveal.js</title>
+    <title>Presentatin HTML RSSchool reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-					<textarea data-template>
-						# HTML Basic
-						<p>Siarhei Pashkevich, 2018Q3 RS School</p>
-					</textarea>
-				</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi )
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>HTML Basics</h1>
+          <p>Siarhei Pashkevich, 2018Q3 RS School</p>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+          <section>
+            <h2>What is HTML?</h2>
+            <p>
+              HTML (Hypertext Markup Language) is the code that is used to
+              structure a web page and its content. For example, content could
+              be structured within a set of paragraphs, a list of bulleted
+              points, or using images and data tables. As the title suggests,
+              this article will give you a basic understanding of HTML and its
+              functions.
+            </p>
+          </section>
+          <section>
+            <h2>So what is HTML, really?</h2>
+            <p>
+              HTML is not a programming language; it is a markup language that
+              defines the structure of your content.
+            </p>
+            <p>
+              For example, take the following line of content:<br />
+              My cat is very grumpy
+            </p>
+            <p>
+              We could specify that it is a paragraph by enclosing it in
+              paragraph tags:
+            </p>
+            <pre><code class="hljs" data-trim>
+							<p>My cat is very grumpy</p>
+						</code></pre>
+          </section>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section>
+          <section>
+            <h2>Anatomy of an HTML element</h2>
+            <p>Let's explore this paragraph element &lt;p&gt; a bit further.</p>
+            <img src="img/anatomyHTML.png" width="400px" alt="anatomyHTML" />
+            <h3>The main parts of our element are:</h3>
+            <ul>
+              <li>The opening tag</li>
+              <li>The closing tag</li>
+              <li>The content</li>
+              <li>The element</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Elements can also have attributes, which look like this:</h3>
+            <img src="img/anatomyCanAttribute.png" alt="anatomyCanAttribute" />
+            <p>An attribute should always have:</p>
+            <ol>
+              <li>A space between it and the element name.</li>
+              <li>The attribute name, followed by an equals sign.</li>
+              <li>
+                Opening and closing quote marks wrapped around the attribute
+                value.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h2>Anatomy of an HTML document</h2>
+            <p>
+              Now we'll look at how individual elements are combined to form an
+              entire HTML page.
+            </p>
+            <img src="img/doctype.png" width="650px" alt="doctype" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Marking up text</h2>
+            <p>
+              This section will cover some of the basic HTML elements we will
+              use for marking up text.
+            </p>
+            <ul>
+              <li>Headings</li>
+              <li>Paragraphs</li>
+              <li>Lists</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Headings</h3>
+            <pre><code>
+              <h1>My main title</h1>
+              <h2>My top level heading</h2>
+              <h3>My subheading</h3>
+              <h4>My sub-subheading</h4>
+              <h5>My sub-sub-subheading</h5>
+              <h6>My sub-sub-sub-subheading</h6>
+            </code></pre>
+          </section>
+          <section>
+            <h3>Paragraphs</h3>
+            <pre><code>
+              <p>This is a single paragraph</p>
+            </code></pre>
+          </section>
+          <section>
+            <h3>Lists</h3>
+            <p>Unordered lists. These are wrapped in a &lt;ul&gt; element.</p>
+            <ul>
+              <li>Headings</li>
+              <li>Paragraphs</li>
+              <li>Lists</li>
+            </ul>
+            <p>Ordered lists. These are wrapped in a &lt;ol&gt; element.</p>
+            <ol>
+              <li>Headings</li>
+              <li>Paragraphs</li>
+              <li>Lists</li>
+            </ol>
+            <p>
+              Each item inside the lists is put inside an &lt;li&gt; (list item)
+              element.
+            </p>
+          </section>
+        </section>
+        <section>
+          <p>At this I have everything, thank you for your attention.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>
